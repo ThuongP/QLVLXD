@@ -1,0 +1,64 @@
+﻿@model VLXD.Models.VATLIEU
+
+@{
+    ViewBag.Title = "Delete";
+}
+
+<h2>Delete</h2>
+
+<h3>Xóa vật liệu này?</h3>
+<div>
+    
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.TenVL)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.TenVL)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.DonVi)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.DonVi)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.GiaVL)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.GiaVL)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.HinhVL)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.HinhVL)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.LOAIVATLIEU.TenLoaiVL)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.LOAIVATLIEU.TenLoaiVL)
+        </dd>
+
+    </dl>
+
+    @using (Html.BeginForm()) {
+        @Html.AntiForgeryToken()
+
+        <div class="form-actions no-color">
+            <input type="submit" value="Xóa" class="btn btn-default" /> |
+            @Html.ActionLink("Quay lại", "Index")
+        </div>
+    }
+</div>

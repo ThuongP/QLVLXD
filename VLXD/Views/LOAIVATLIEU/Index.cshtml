@@ -1,0 +1,33 @@
+﻿@model IEnumerable<VLXD.Models.LOAIVATLIEU>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.TenLoaiVL)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.TenLoaiVL)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.MaLoaiVL }) |
+            @Html.ActionLink("Details", "Details", new { id=item.MaLoaiVL }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.MaLoaiVL })
+        </td>
+    </tr>
+}
+
+</table>
